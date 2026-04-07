@@ -49,7 +49,6 @@ export class EditArticlePage {
     await test.step(`Remove article tags`, async () => {
       for (let i = 0; i < tags.length; i++) {
         await this.page.getByText(tags[i]).locator('i').click();
-        await this.page.keyboard.press('Enter');
       }
     });
   }

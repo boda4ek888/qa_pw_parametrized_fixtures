@@ -33,7 +33,7 @@ const testParameters = [
 
 testParameters.forEach(({ email, username, password, message, title }) => {
   test.describe('Sign up negative tests', () => {
-    test(`Sign up with ${title}`, async ({ user, signUpPage }) => {
+    test(`Sign up with ${title}`, async ({ signUpPage }) => {
       await signUpPage.open();
       await signUpPage.fillUsernameField(username);
       await signUpPage.fillEmailField(email);
